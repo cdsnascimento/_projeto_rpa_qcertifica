@@ -6,9 +6,9 @@
 
 import logging
 import os
-import sys
 import threading
 import tkinter as tk
+from datetime import datetime
 from tkinter import messagebox, scrolledtext, ttk
 
 # ---------------------------------------------------------------------------
@@ -19,6 +19,9 @@ try:
     _HAS_TKCALENDAR = True
 except ImportError:
     _HAS_TKCALENDAR = False
+
+_MAX_DIAS = 120
+_DATE_FMT = "%d/%m/%Y"
 
 
 # ---------------------------------------------------------------------------
@@ -49,10 +52,13 @@ class App(tk.Tk):
         super().__init__()
         self.title("Q-Certifica — Downloader de Contratos")
         self.resizable(True, True)
-        self.minsize(620, 520)
+        self.minsize(640, 540)
 
         self._build_ui()
         self._thread: threading.Thread | None = None
+
+        # Calcula o intervalo inicial (valores default já preenchidos)
+        self._atualizar_intervalo()
 
     # ------------------------------------------------------------------
     # Construção da interface
@@ -84,19 +90,49 @@ class App(tk.Tk):
         self._ent_contratante = ttk.Entry(frm_filt, textvariable=self._var_contratante, width=18)
         self._ent_contratante.grid(row=0, column=1, sticky="w", padx=6, pady=4)
 
+        # Data De
         ttk.Label(frm_filt, text="Data De:").grid(row=1, column=0, sticky="e", padx=6, pady=4)
         self._var_de = tk.StringVar(value="01/01/2022")
+        self._var_de.trace_add("write", lambda *_: self._atualizar_intervalo())
         self._ent_de = self._make_datepicker(frm_filt, self._var_de)
         self._ent_de.grid(row=1, column=1, sticky="w", padx=6, pady=4)
 
+        # Data Até
         ttk.Label(frm_filt, text="Data Até:").grid(row=2, column=0, sticky="e", padx=6, pady=4)
         self._var_ate = tk.StringVar(value="30/04/2022")
+        self._var_ate.trace_add("write", lambda *_: self._atualizar_intervalo())
         self._ent_ate = self._make_datepicker(frm_filt, self._var_ate)
         self._ent_ate.grid(row=2, column=1, sticky="w", padx=6, pady=4)
 
+        # Diferença em dias (somente leitura)
+        ttk.Label(frm_filt, text="Intervalo:").grid(row=3, column=0, sticky="e", padx=6, pady=4)
+        frm_intervalo = ttk.Frame(frm_filt)
+        frm_intervalo.grid(row=3, column=1, sticky="w", padx=6, pady=4)
+
+        self._var_dias = tk.StringVar(value="—")
+        self._lbl_dias = ttk.Entry(
+            frm_intervalo,
+            textvariable=self._var_dias,
+            width=6,
+            state="readonly",
+            justify="center",
+            font=("Segoe UI", 9, "bold"),
+        )
+        self._lbl_dias.pack(side="left")
+        ttk.Label(frm_intervalo, text="dias").pack(side="left", padx=(4, 0))
+
+        # Aviso de limite (inicialmente oculto)
+        self._lbl_aviso = ttk.Label(
+            frm_filt,
+            text=f"⚠  Intervalo máximo permitido: {_MAX_DIAS} dias.",
+            foreground="#c0392b",
+        )
+        # posicionado na row 4, coluna 0-1 — exibido apenas quando necessário
+        self._aviso_visivel = False
+
         # ── Botão Iniciar ─────────────────────────────────────────────
         self._btn_iniciar = ttk.Button(
-            self, text="▶  Iniciar", command=self._iniciar, style="Accent.TButton"
+            self, text="▶  Iniciar", command=self._iniciar
         )
         self._btn_iniciar.grid(row=2, column=0, pady=(4, 10))
 
@@ -125,9 +161,6 @@ class App(tk.Tk):
     # ------------------------------------------------------------------
     def _make_datepicker(self, parent, textvariable: tk.StringVar):
         if _HAS_TKCALENDAR:
-            # DateEntry usa formato DD/MM/AAAA
-            val = textvariable.get()
-            day, month, year = (val.split("/") + ["", "", ""])[:3]
             w = DateEntry(
                 parent,
                 textvariable=textvariable,
@@ -140,9 +173,58 @@ class App(tk.Tk):
             return w
         else:
             ent = ttk.Entry(parent, textvariable=textvariable, width=16)
-            # placeholder visual como tooltip
-            ent.insert(0, textvariable.get())
             return ent
+
+    # ------------------------------------------------------------------
+    # Calcula e exibe a diferença em dias; habilita/desabilita o botão
+    # ------------------------------------------------------------------
+    def _atualizar_intervalo(self):
+        de_str  = self._var_de.get().strip()
+        ate_str = self._var_ate.get().strip()
+
+        try:
+            d_de  = datetime.strptime(de_str,  _DATE_FMT)
+            d_ate = datetime.strptime(ate_str, _DATE_FMT)
+            dias  = (d_ate - d_de).days
+        except ValueError:
+            # Data incompleta ou inválida — não calcula ainda
+            self._var_dias.set("—")
+            self._set_aviso(False)
+            self._btn_iniciar.configure(state="normal")
+            return
+
+        if dias < 0:
+            self._var_dias.set("—")
+            self._set_aviso(False)
+            self._btn_iniciar.configure(state="normal")
+            return
+
+        self._var_dias.set(str(dias))
+
+        if dias > _MAX_DIAS:
+            self._set_aviso(True)
+            self._btn_iniciar.configure(state="disabled")
+            self._status_var.set(
+                f"⚠  Intervalo de {dias} dias excede o limite de {_MAX_DIAS} dias."
+            )
+        else:
+            self._set_aviso(False)
+            self._btn_iniciar.configure(state="normal")
+            self._status_var.set("Pronto.")
+
+    # ------------------------------------------------------------------
+    # Exibe ou oculta o label de aviso dentro do quadro de filtros
+    # ------------------------------------------------------------------
+    def _set_aviso(self, visivel: bool):
+        if visivel and not self._aviso_visivel:
+            self._lbl_aviso.grid(
+                row=4, column=0, columnspan=2,
+                sticky="w", padx=6, pady=(0, 4)
+            )
+            self._aviso_visivel = True
+        elif not visivel and self._aviso_visivel:
+            self._lbl_aviso.grid_remove()
+            self._aviso_visivel = False
 
     # ------------------------------------------------------------------
     # Validação dos campos
@@ -170,7 +252,6 @@ class App(tk.Tk):
     def _configurar_logging(self):
         handler = _TextHandler(self._log_area)
         handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
-        # Anexa ao logger raiz — captura todos os módulos (scraper, downloader…)
         root_log = logging.getLogger()
         # Remove handlers antigos de arquivo para não duplicar
         root_log.handlers = [
@@ -197,8 +278,8 @@ class App(tk.Tk):
         # Atualiza filtros globais em config
         import config
         config.FILTROS["contratante_codigo"] = self._var_contratante.get().strip()
-        config.FILTROS["fechamento_de"] = self._var_de.get().strip()
-        config.FILTROS["fechamento_ate"] = self._var_ate.get().strip()
+        config.FILTROS["fechamento_de"]       = self._var_de.get().strip()
+        config.FILTROS["fechamento_ate"]      = self._var_ate.get().strip()
 
         self._configurar_logging()
         self._set_form_state("disabled")
@@ -214,7 +295,6 @@ class App(tk.Tk):
         log = logging.getLogger(__name__)
         driver = None
         try:
-            # Importa aqui para pegar config já sobrescrito
             from utils import init_log
             init_log()
 
@@ -262,13 +342,18 @@ class App(tk.Tk):
             self._ent_contratante,
             self._ent_de,
             self._ent_ate,
-            self._btn_iniciar,
         ]
         for w in widgets:
             try:
                 w.configure(state=state)
             except tk.TclError:
                 pass
+
+        # O botão Iniciar só volta a "normal" se o intervalo ainda for válido
+        if state == "normal":
+            self._atualizar_intervalo()
+        else:
+            self._btn_iniciar.configure(state=state)
 
 
 # ---------------------------------------------------------------------------
