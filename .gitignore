@@ -1,4 +1,5 @@
 .env
+.env.exemple
 downloads/
 build/
 dist/
