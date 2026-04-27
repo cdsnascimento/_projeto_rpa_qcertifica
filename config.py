@@ -1,10 +1,16 @@
 # config.py - Configuracoes e filtros do scraper Q-Certifica (FAS903)
 # Edite este arquivo para ajustar filtros e comportamento sem tocar na logica.
 
+import sys
 from pathlib import Path
 
-# Diretorios
-BASE_DIR = Path(__file__).parent
+# Quando empacotado com PyInstaller (--onefile ou --onedir), __file__ aponta para
+# a pasta temporária de extração. Usamos sys.executable para gravar dados ao lado
+# do .exe; em modo de desenvolvimento, usamos o diretório do próprio script.
+if getattr(sys, "frozen", False):
+    BASE_DIR = Path(sys.executable).parent
+else:
+    BASE_DIR = Path(__file__).parent
 DOWNLOAD_DIR = BASE_DIR / "downloads"
 LOG_FILE = BASE_DIR / "downloads_log.csv"
 CHECKPOINT_FILE = BASE_DIR / "checkpoint.txt"

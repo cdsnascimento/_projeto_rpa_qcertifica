@@ -146,6 +146,38 @@ class QCertificaScraper:
         self.wait = WebDriverWait(self.driver, PAGE_LOAD_TIMEOUT)
 
     # ---------------------------------------------------------------------- #
+    # Helpers internos                                                        #
+    # ---------------------------------------------------------------------- #
+
+    def _tratar_popup_sessao_duplicada(self, timeout: float = 6.0) -> None:
+        """
+        Detecta e dispensa o popup 'usuário já logado em outro local'.
+        O popup aparece esporadicamente após o submit do formulário de login.
+        Estratégia: procura o botão 'Continuar' dentro de um timeout curto;
+        se não aparecer, retorna silenciosamente sem lançar exceção.
+        """
+        import time as _time
+
+        _XPATH_CONTINUAR = '//*[@id="ctl00_body_btnSimUsuarioLogado"]'
+
+        deadline = _time.monotonic() + timeout
+        while _time.monotonic() < deadline:
+            btns = self.driver.find_elements(By.XPATH, _XPATH_CONTINUAR)
+            if btns:
+                try:
+                    self.driver.execute_script("arguments[0].scrollIntoView(true);", btns[0])
+                    btns[0].click()
+                    logger.info("Popup 'sessão duplicada' detectado — clicado em Continuar.")
+                    _time.sleep(1.0)   # aguarda o portal processar o clique
+                    return
+                except Exception as e:
+                    logger.debug("Popup 'sessão duplicada': erro ao clicar — %s", e)
+            _time.sleep(0.4)
+
+        # Nenhum popup encontrado — caminho normal, sem erro
+        logger.debug("Popup 'sessão duplicada' não apareceu (normal).")
+
+    # ---------------------------------------------------------------------- #
     # Login                                                                   #
     # ---------------------------------------------------------------------- #
 
@@ -171,6 +203,9 @@ class QCertificaScraper:
         self.driver.execute_script("arguments[0].value = '';", campo_senha)
         campo_senha.send_keys(password)
         campo_senha.send_keys(Keys.RETURN)
+
+        # Trata popup "usuário já logado em outro local" — aparece esporadicamente
+        self._tratar_popup_sessao_duplicada()
 
         self.wait.until(lambda d: "login" not in d.current_url.lower())
         logger.info("Login realizado com sucesso.")
