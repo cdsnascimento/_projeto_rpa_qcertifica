@@ -1,5 +1,7 @@
 .env
 downloads/
+build/
+dist/
 checkpoint.txt
 downloads_log.csv
 scraper.log
