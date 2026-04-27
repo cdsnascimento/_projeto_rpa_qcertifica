@@ -1,0 +1,45 @@
+18:59:42 ====== WebDriver manager ======
+18:59:44 Get LATEST chromedriver version for google-chrome
+18:59:44 Get LATEST chromedriver version for google-chrome
+18:59:45 Driver [C:\Users\ZAMBONI\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+18:59:46 Acessando https://portal.qcertifica.com.br/...
+18:59:54 Login realizado com sucesso.
+18:59:54 Navegando para FAS903: https://portal.qcertifica.com.br/DigitalSignature/FAS903.aspx
+18:59:56 Tela FAS903 carregada.
+18:59:56 Aplicando filtros...
+18:59:56 Selecionando aba Historico...
+18:59:56 Aba Historico acionada: api:1:Histórico
+19:00:00 Contratante: '67632' / 'Red Fidc Multisetorial Lp' preenchidos via JS.
+19:00:00 DatePicker 'ctl00_cphContext_tabManager_PV1_UC0_frvDocument_txbRemittanceDateFrom_dateInput' preenchido com '01/01/2022'.
+19:00:00 Data De '01/01/2022': OK
+19:00:00 DatePicker 'ctl00_cphContext_tabManager_PV1_UC0_frvDocument_txbRemittanceDateTo_dateInput' preenchido com '30/04/2022'.
+19:00:00 Data Para '30/04/2022': OK
+19:00:00 Validators do grupo validateFilter desativados.
+19:00:00 Botao Buscar clicado. Aguardando resultados...
+19:00:07 Grid resultado: 9 linhas tr, 2 com dados.
+19:00:07 Preview:  |  | 				 |  | 				 | 					 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 	 |  | 						 | 							 Remessa ArquivoContratanteCedente   TermoTít. NecesTít. Atu StatusFech.RecebimentoFechamento  | 						 | 
+19:00:13 Grid: 30 linhas. Inspecionando linha 0...
+19:00:13 Row id: ctl00_cphContext_tabManager_PV1_UC0_grdRemittance_ctl00__0
+19:00:13 Total de tds: 12
+19:00:13 ======================================================================
+19:00:13 td[1] (idx=0) | text='16715' | onclick='' | html='<div class="cellTextContainer">16715</div>'
+19:00:13 td[2] (idx=1) | text='Contrato_25357905.xml' | onclick='' | html='<div class="cellTextContainer">Contrato_25357905.xml</div>'
+19:00:13 td[3] (idx=2) <-- CLICAVEL | text='' | onclick='' | html='
+                                        <input type="submit" name="ctl00$cphContext$tabManager$PV1_'
+19:00:13         INPUT cls='btnGrid btnDetails' onclick='' href='' src='' title='Visualizar Documentos' text=''
+19:00:13 td[4] (idx=3) | text='Red Fidc Multisetorial Lp' | onclick='' | html='<div class="cellTextContainer">Red Fidc Multisetorial Lp</div>'
+19:00:13 td[5] (idx=4) | text='Mix Certo Distribuidora De Cos' | onclick='' | html='<div class="cellTextContainer">Mix Certo Distribuidora De Cosmeticos Alimentos E Limpe</div>'
+19:00:13 td[6] (idx=5) <-- CLICAVEL | text='' | onclick='' | html='
+                                        <input type="submit" name="ctl00$cphContext$tabManager$PV1_'
+19:00:13         INPUT cls='btnGrid btnZip' onclick='' href='' src='' title='Baixar arquivo Zip' text=''
+19:00:13 td[7] (idx=6) <-- CLICAVEL | text='' | onclick='' | html='
+                                        <input type="submit" name="ctl00$cphContext$tabManager$PV1_'
+19:00:13         INPUT cls='btnGrid btnXml' onclick='' href='' src='' title='Baixar arquivo Xml' text=''
+19:00:13 td[8] (idx=7) | text='0' | onclick='' | html='<div class="cellTextContainer">0</div>'
+19:00:13 td[9] (idx=8) | text='0' | onclick='' | html='<div class="cellTextContainer">0</div>'
+19:00:13 td[10] (idx=9) | text='29/04/22 12:29:16' | onclick='' | html='<div class="cellTextContainer">29/04/22 12:29:16</div>'
+19:00:13 td[11] (idx=10) | text='29/04/22 13:22:20' | onclick='' | html='<div class="cellTextContainer">29/04/22 13:22:20</div>'
+19:00:13 td[12] (idx=11) | text='' | onclick='' | html='<div class="cellTextContainer">
+                                        
+                           '
+19:00:13 ======================================================================

@@ -1,0 +1,346 @@
+10:24:50 [INFO] ============================================================
+10:24:50 [INFO]   test_popups v5 — iniciando
+10:24:50 [INFO] ============================================================
+10:24:50 [INFO] ====== WebDriver manager ======
+10:24:52 [INFO] Get LATEST chromedriver version for google-chrome
+10:24:52 [DEBUG] Starting new HTTPS connection (1): googlechromelabs.github.io:443
+10:24:52 [DEBUG] https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 16376
+10:24:52 [INFO] Get LATEST chromedriver version for google-chrome
+10:24:52 [DEBUG] Starting new HTTPS connection (1): googlechromelabs.github.io:443
+10:24:53 [DEBUG] https://googlechromelabs.github.io:443 "GET /chrome-for-testing/latest-patch-versions-per-build.json HTTP/1.1" 200 16376
+10:24:53 [INFO] Driver [C:\Users\ZAMBONI\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe] found in cache
+10:24:53 [DEBUG] Skipping Selenium Manager; path to chrome driver specified in Service class: C:\Users\ZAMBONI\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe
+10:24:53 [DEBUG] Started executable: `C:\Users\ZAMBONI\.wdm\drivers\chromedriver\win64\147.0.7727.117\chromedriver-win32/chromedriver.exe` in a child process with pid: 40544 using 0 to output -3
+10:24:53 [DEBUG] POST http://localhost:58362/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'goog:chromeOptions': {'prefs': {'download.default_directory': 'C:\\Users\\ZAMBONI\\Documents\\Data Science\\_projeto_qcertifica\\qcertifica_scraper\\downloads', 'download.prompt_for_download': False, 'download.directory_upgrade': True, 'plugins.always_open_pdf_externally': True}, 'excludeSwitches': ['enable-logging'], 'extensions': [], 'args': ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu']}}}}
+10:24:53 [DEBUG] Starting new HTTP connection (1): localhost:58362
+10:24:54 [DEBUG] http://localhost:58362 "POST /session HTTP/1.1" 200 0
+10:24:54 [DEBUG] Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"147.0.7727.102","chrome":{"chromedriverVersion":"147.0.7727.117 (474cc805edd6b22006509896c910f6b6da2427ad-refs/branch-heads/7727_111@{#4})","userDataDir":"C:\\Users\\ZAMBONI\\AppData\\Local\\Temp\\scoped_dir40544_2075234005"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:58365"},"goog:processID":39404,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"c1b7a8288f8c16b7a0b0b7730297eb5c"}} | headers=HTTPHeaderDict({'Content-Length': '910', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:54 [DEBUG] Finished Request
+10:24:54 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/timeouts {'pageLoad': 30000}
+10:24:54 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/timeouts HTTP/1.1" 200 0
+10:24:54 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:54 [DEBUG] Finished Request
+10:24:54 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/timeouts {'implicit': 2000}
+10:24:54 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/timeouts HTTP/1.1" 200 0
+10:24:54 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:54 [DEBUG] Finished Request
+10:24:54 [INFO] Acessando https://portal.qcertifica.com.br/...
+10:24:54 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/url {'url': 'https://portal.qcertifica.com.br/'}
+10:24:57 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/url HTTP/1.1" 200 0
+10:24:57 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:57 [DEBUG] Finished Request
+10:24:57 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element {'using': 'css selector', 'value': "input[type='text']:not([readonly]):not([disabled])"}
+10:24:57 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element HTTP/1.1" 200 0
+10:24:57 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.49FD7B1A04E322097374270FE544B340.e.32"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:57 [DEBUG] Finished Request
+10:24:57 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element {'using': 'css selector', 'value': "input[type='password']"}
+10:24:57 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element HTTP/1.1" 200 0
+10:24:57 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.49FD7B1A04E322097374270FE544B340.e.34"}} | headers=HTTPHeaderDict({'Content-Length': '126', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:57 [DEBUG] Finished Request
+10:24:57 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': "arguments[0].value = '';", 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.E25946D14C454734A08D50BBC95BF6B8.d.49FD7B1A04E322097374270FE544B340.e.32'}]}
+10:24:57 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:24:57 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:57 [DEBUG] Finished Request
+10:24:57 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.49FD7B1A04E322097374270FE544B340.e.32/value {'text': '11418729604', 'value': ['1', '1', '4', '1', '8', '7', '2', '9', '6', '0', '4']}
+10:24:57 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.49FD7B1A04E322097374270FE544B340.e.32/value HTTP/1.1" 200 0
+10:24:57 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:57 [DEBUG] Finished Request
+10:24:57 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': "arguments[0].value = '';", 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.E25946D14C454734A08D50BBC95BF6B8.d.49FD7B1A04E322097374270FE544B340.e.34'}]}
+10:24:57 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:24:57 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:57 [DEBUG] Finished Request
+10:24:57 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.49FD7B1A04E322097374270FE544B340.e.34/value {'text': 'mixcerto2026.', 'value': ['m', 'i', 'x', 'c', 'e', 'r', 't', 'o', '2', '0', '2', '6', '.']}
+10:24:57 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.49FD7B1A04E322097374270FE544B340.e.34/value HTTP/1.1" 200 0
+10:24:57 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:57 [DEBUG] Finished Request
+10:24:57 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.49FD7B1A04E322097374270FE544B340.e.34/value {'text': '\ue006', 'value': ['\ue006']}
+10:24:57 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.49FD7B1A04E322097374270FE544B340.e.34/value HTTP/1.1" 200 0
+10:24:57 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:57 [DEBUG] Finished Request
+10:24:57 [DEBUG] GET http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/url {}
+10:24:57 [DEBUG] http://localhost:58362 "GET /session/c1b7a8288f8c16b7a0b0b7730297eb5c/url HTTP/1.1" 200 0
+10:24:57 [DEBUG] Remote response: status=200 | data={"value":"https://portal.qcertifica.com.br/Authentication/Login.aspx?enc=IuazGqDuFUuv0DlQ9kwRLn8grINIeo9xG89TdjTBfbo="} | headers=HTTPHeaderDict({'Content-Length': '119', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:57 [DEBUG] Finished Request
+10:24:58 [DEBUG] GET http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/url {}
+10:24:58 [DEBUG] http://localhost:58362 "GET /session/c1b7a8288f8c16b7a0b0b7730297eb5c/url HTTP/1.1" 200 0
+10:24:58 [DEBUG] Remote response: status=200 | data={"value":"https://portal.qcertifica.com.br/Authentication/Login.aspx?enc=IuazGqDuFUuv0DlQ9kwRLn8grINIeo9xG89TdjTBfbo="} | headers=HTTPHeaderDict({'Content-Length': '119', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:58 [DEBUG] Finished Request
+10:24:58 [DEBUG] GET http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/url {}
+10:24:58 [DEBUG] http://localhost:58362 "GET /session/c1b7a8288f8c16b7a0b0b7730297eb5c/url HTTP/1.1" 200 0
+10:24:58 [DEBUG] Remote response: status=200 | data={"value":"https://portal.qcertifica.com.br/Authentication/Login.aspx?enc=IuazGqDuFUuv0DlQ9kwRLn8grINIeo9xG89TdjTBfbo="} | headers=HTTPHeaderDict({'Content-Length': '119', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:24:58 [DEBUG] Finished Request
+10:24:59 [DEBUG] GET http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/url {}
+10:25:01 [DEBUG] http://localhost:58362 "GET /session/c1b7a8288f8c16b7a0b0b7730297eb5c/url HTTP/1.1" 200 0
+10:25:01 [DEBUG] Remote response: status=200 | data={"value":"https://portal.qcertifica.com.br/DigitalSignature/FAS906.aspx?enc=IuazGqDuFUuv0DlQ9kwRLn8grINIeo9xG89TdjTBfbo="} | headers=HTTPHeaderDict({'Content-Length': '122', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:01 [DEBUG] Finished Request
+10:25:01 [INFO] Login realizado com sucesso.
+10:25:01 [INFO] Navegando para FAS903: https://portal.qcertifica.com.br/DigitalSignature/FAS903.aspx
+10:25:01 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/url {'url': 'https://portal.qcertifica.com.br/DigitalSignature/FAS903.aspx'}
+10:25:02 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/url HTTP/1.1" 200 0
+10:25:02 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:02 [DEBUG] Finished Request
+10:25:02 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element {'using': 'css selector', 'value': 'form'}
+10:25:02 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element HTTP/1.1" 200 0
+10:25:02 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.195"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:02 [DEBUG] Finished Request
+10:25:02 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': 'return document.readyState', 'args': []}
+10:25:02 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:02 [DEBUG] Remote response: status=200 | data={"value":"complete"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:02 [DEBUG] Finished Request
+10:25:02 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': "\n                var els=document.querySelectorAll(\n                    '.RadAjaxPanel,.raDiv,[class...", 'args': []}
+10:25:02 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:02 [DEBUG] Remote response: status=200 | data={"value":false} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:02 [DEBUG] Finished Request
+10:25:03 [INFO] Tela FAS903 carregada.
+10:25:03 [INFO] Aplicando filtros...
+10:25:03 [INFO] Selecionando aba Historico...
+10:25:03 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': "\n            try {\n                var ts=(window.$find)?$find('ctl00_cphContext_tabManager_tbsMain'...", 'args': []}
+10:25:03 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:03 [DEBUG] Remote response: status=200 | data={"value":"api:1:Histórico"} | headers=HTTPHeaderDict({'Content-Length': '28', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:03 [DEBUG] Finished Request
+10:25:03 [INFO] Aba Historico acionada: api:1:Histórico
+10:25:06 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': 'return document.readyState', 'args': []}
+10:25:06 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:06 [DEBUG] Remote response: status=200 | data={"value":"complete"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:06 [DEBUG] Finished Request
+10:25:06 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': "\n                var els=document.querySelectorAll(\n                    '.RadAjaxPanel,.raDiv,[class...", 'args': []}
+10:25:06 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:06 [DEBUG] Remote response: status=200 | data={"value":false} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:06 [DEBUG] Finished Request
+10:25:07 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': '\n                var code = document.getElementById(arguments[0]);\n                var desc = docume...', 'args': ['ctl00_cphContext_tabManager_PV1_UC0_frvDocument_txbCompanyCode', 'ctl00_cphContext_tabManager_PV1_UC0_frvDocument_txbCompanyDescription', '67632', 'Red Fidc Multisetorial Lp']}
+10:25:07 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:07 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:07 [DEBUG] Finished Request
+10:25:07 [INFO] Contratante: '67632' / 'Red Fidc Multisetorial Lp' preenchidos via JS.
+10:25:07 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element {'using': 'xpath', 'value': '//*[@id="ctl00_cphContext_tabManager_PV1_UC0_frvDocument_txbRemittanceDateFrom_dateInput"]'}
+10:25:07 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element HTTP/1.1" 200 0
+10:25:07 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.262"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:07 [DEBUG] Finished Request
+10:25:07 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': "arguments[0].value='';", 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.262'}]}
+10:25:07 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:07 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:07 [DEBUG] Finished Request
+10:25:07 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.262/value {'text': '01/01/2022', 'value': ['0', '1', '/', '0', '1', '/', '2', '0', '2', '2']}
+10:25:07 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.262/value HTTP/1.1" 200 0
+10:25:07 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:07 [DEBUG] Finished Request
+10:25:07 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.262/value {'text': '\ue004', 'value': ['\ue004']}
+10:25:07 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.262/value HTTP/1.1" 200 0
+10:25:07 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:07 [DEBUG] Finished Request
+10:25:08 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': '\n                var cs=document.getElementById(arguments[0]);\n                if(cs){cs.value=argum...', 'args': ['ctl00_cphContext_tabManager_PV1_UC0_frvDocument_txbRemittanceDateFrom_dateInput_ClientState', '{"enabled":true,"emptyMessage":"","validationText":"2022-01-01-00-00-00","valueAsString":"2022-01-01-00-00-00","minDateStr":"0001-01-01-00-00-00","maxDateStr":"9999-12-31-00-00-00","lastSetTextBoxValue":"01/01/2022"}']}
+10:25:08 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:08 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:08 [DEBUG] Finished Request
+10:25:08 [DEBUG] DatePicker 'ctl00_cphContext_tabManager_PV1_UC0_frvDocument_txbRemittanceDateFrom_dateInput' preenchido com '01/01/2022'.
+10:25:08 [INFO] Data De '01/01/2022': OK
+10:25:08 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element {'using': 'xpath', 'value': '//*[@id="ctl00_cphContext_tabManager_PV1_UC0_frvDocument_txbRemittanceDateTo_dateInput"]'}
+10:25:08 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element HTTP/1.1" 200 0
+10:25:08 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.264"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:08 [DEBUG] Finished Request
+10:25:08 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': "arguments[0].value='';", 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.264'}]}
+10:25:08 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:08 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:08 [DEBUG] Finished Request
+10:25:08 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.264/value {'text': '30/04/2022', 'value': ['3', '0', '/', '0', '4', '/', '2', '0', '2', '2']}
+10:25:08 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.264/value HTTP/1.1" 200 0
+10:25:08 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:08 [DEBUG] Finished Request
+10:25:08 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.264/value {'text': '\ue004', 'value': ['\ue004']}
+10:25:08 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.264/value HTTP/1.1" 200 0
+10:25:08 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:08 [DEBUG] Finished Request
+10:25:08 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': '\n                var cs=document.getElementById(arguments[0]);\n                if(cs){cs.value=argum...', 'args': ['ctl00_cphContext_tabManager_PV1_UC0_frvDocument_txbRemittanceDateTo_dateInput_ClientState', '{"enabled":true,"emptyMessage":"","validationText":"2022-04-30-00-00-00","valueAsString":"2022-04-30-00-00-00","minDateStr":"0001-01-01-00-00-00","maxDateStr":"9999-12-31-00-00-00","lastSetTextBoxValue":"30/04/2022"}']}
+10:25:08 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:08 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:08 [DEBUG] Finished Request
+10:25:08 [DEBUG] DatePicker 'ctl00_cphContext_tabManager_PV1_UC0_frvDocument_txbRemittanceDateTo_dateInput' preenchido com '30/04/2022'.
+10:25:08 [INFO] Data Para '30/04/2022': OK
+10:25:09 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': 'return document.readyState', 'args': []}
+10:25:09 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:09 [DEBUG] Remote response: status=200 | data={"value":"complete"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:09 [DEBUG] Finished Request
+10:25:09 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': "\n                var els=document.querySelectorAll(\n                    '.RadAjaxPanel,.raDiv,[class...", 'args': []}
+10:25:09 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:09 [DEBUG] Remote response: status=200 | data={"value":false} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:09 [DEBUG] Finished Request
+10:25:10 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': "\n            if (typeof Page_Validators !== 'undefined') {\n                for (var i = 0; i < Page_...", 'args': []}
+10:25:10 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:10 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:10 [DEBUG] Finished Request
+10:25:10 [DEBUG] Validators do grupo validateFilter desativados.
+10:25:10 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element {'using': 'xpath', 'value': '//*[@id="ctl00_cphContext_tabManager_PV1_UC0_frvDocument_btnFind"]'}
+10:25:10 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element HTTP/1.1" 200 0
+10:25:10 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.275"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:10 [DEBUG] Finished Request
+10:25:10 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.275'}]}
+10:25:10 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:10 [DEBUG] Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:10 [DEBUG] Finished Request
+10:25:10 [DEBUG] GET http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.275/enabled {}
+10:25:10 [DEBUG] http://localhost:58362 "GET /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.275/enabled HTTP/1.1" 200 0
+10:25:10 [DEBUG] Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:10 [DEBUG] Finished Request
+10:25:10 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.275/click {}
+10:25:10 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.275/click HTTP/1.1" 200 0
+10:25:10 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:10 [DEBUG] Finished Request
+10:25:10 [INFO] Botao Buscar clicado. Aguardando resultados...
+10:25:16 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': 'return document.readyState', 'args': []}
+10:25:16 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:16 [DEBUG] Remote response: status=200 | data={"value":"complete"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:16 [DEBUG] Finished Request
+10:25:16 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': "\n                var els=document.querySelectorAll(\n                    '.RadAjaxPanel,.raDiv,[class...", 'args': []}
+10:25:16 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:16 [DEBUG] Remote response: status=200 | data={"value":false} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:16 [DEBUG] Finished Request
+10:25:17 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': '\n            var grid=document.querySelector("[id$=\'grdRemittance\']");\n            if(!grid) return ...', 'args': []}
+10:25:17 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:17 [DEBUG] Remote response: status=200 | data={"value":{"dados":2,"ok":true,"preview":"\n\n\t\t\t\t\n\n\t\t\t\t\n\t\t\t\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t Remessa ArquivoContratanteCedente   TermoTít. NecesTít. Atu StatusFech.RecebimentoFechamento \n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n \n\t\t\t\t\t\n\n\t\t\t\t\n\t\t\t\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t","totalTr":9}} | headers=HTTPHeaderDict({'Content-Length': '570', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:17 [DEBUG] Finished Request
+10:25:17 [INFO] Grid resultado: 9 linhas tr, 2 com dados.
+10:25:17 [DEBUG] Preview:  |  | 				 |  | 				 | 					 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 		 | 	 |  | 						 | 							 Remessa ArquivoContratanteCedente   TermoTít. NecesTít. Atu StatusFech.RecebimentoFechamento  | 						 | 
+10:25:17 [INFO] Filtros aplicados. Aguardando grid...
+10:25:21 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': 'return document.readyState', 'args': []}
+10:25:21 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:21 [DEBUG] Remote response: status=200 | data={"value":"complete"} | headers=HTTPHeaderDict({'Content-Length': '20', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:21 [DEBUG] Finished Request
+10:25:21 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': "\n                var els=document.querySelectorAll(\n                    '.RadAjaxPanel,.raDiv,[class...", 'args': []}
+10:25:21 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:21 [DEBUG] Remote response: status=200 | data={"value":false} | headers=HTTPHeaderDict({'Content-Length': '15', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:21 [DEBUG] Finished Request
+10:25:21 [DEBUG] GET http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/window {}
+10:25:21 [DEBUG] http://localhost:58362 "GET /session/c1b7a8288f8c16b7a0b0b7730297eb5c/window HTTP/1.1" 200 0
+10:25:21 [DEBUG] Remote response: status=200 | data={"value":"E25946D14C454734A08D50BBC95BF6B8"} | headers=HTTPHeaderDict({'Content-Length': '44', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:21 [DEBUG] Finished Request
+10:25:21 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': '\n        var rows = document.querySelectorAll("tr[id*=\'grdRemittance_ctl00__\']");\n        var ids = ...', 'args': []}
+10:25:21 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:21 [DEBUG] Remote response: status=200 | data={"value":{"ids":["ctl00_cphContext_tabManager_PV1_UC0_grdRemittance_ctl00__0","ctl00_cphContext_tabManager_PV1_UC0_grdRemittance_ctl00__1","ctl00_cphContext_tabManager_PV1_UC0_grdRemittance_ctl00__2"],"total":30}} | headers=HTTPHeaderDict({'Content-Length': '213', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:21 [DEBUG] Finished Request
+10:25:21 [INFO] Grid: 30 linhas | ids=['ctl00_cphContext_tabManager_PV1_UC0_grdRemittance_ctl00__0', 'ctl00_cphContext_tabManager_PV1_UC0_grdRemittance_ctl00__1', 'ctl00_cphContext_tabManager_PV1_UC0_grdRemittance_ctl00__2']
+10:25:21 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/elements {'using': 'css selector', 'value': "tr[id*='grdRemittance_ctl00__']"}
+10:25:21 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/elements HTTP/1.1" 200 0
+10:25:21 [DEBUG] Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.293"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.294"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.295"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.296"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.297"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.298"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.299"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.300"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.301"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.302"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.303"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.304"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.305"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.306"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.307"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.308"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.309"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.310"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.311"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.312"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.313"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.314"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.315"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.316"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.317"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.318"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.319"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.320"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.321"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.322"}]} | headers=HTTPHeaderDict({'Content-Length': '3551', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:21 [DEBUG] Finished Request
+10:25:21 [INFO] Pagina 1: 30 linhas. Testando APENAS a linha 0.
+10:25:21 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': '/* getAttribute */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.293'}, 'id']}
+10:25:21 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:21 [DEBUG] Remote response: status=200 | data={"value":"ctl00_cphContext_tabManager_PV1_UC0_grdRemittance_ctl00__0"} | headers=HTTPHeaderDict({'Content-Length': '70', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:21 [DEBUG] Finished Request
+10:25:21 [INFO] Linha 0 | id='ctl00_cphContext_tabManager_PV1_UC0_grdRemittance_ctl00__0'
+10:25:21 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element {'using': 'css selector', 'value': '[id="ctl00_cphContext_tabManager_PV1_UC0_grdRemittance_ctl00__0"]'}
+10:25:21 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element HTTP/1.1" 200 0
+10:25:21 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.293"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:21 [DEBUG] Finished Request
+10:25:21 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.293/elements {'using': 'tag name', 'value': 'td'}
+10:25:21 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.293/elements HTTP/1.1" 200 0
+10:25:21 [DEBUG] Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.323"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.324"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.325"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.326"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.327"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.328"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.329"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.330"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.331"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.332"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.333"},{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.334"}]} | headers=HTTPHeaderDict({'Content-Length': '1427', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:21 [DEBUG] Finished Request
+10:25:21 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': "arguments[0].scrollIntoView({block:'center'});", 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.325'}]}
+10:25:21 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:21 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:21 [DEBUG] Finished Request
+10:25:21 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.325/element {'using': 'tag name', 'value': 'input'}
+10:25:21 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.325/element HTTP/1.1" 200 0
+10:25:21 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.335"}} | headers=HTTPHeaderDict({'Content-Length': '127', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:21 [DEBUG] Finished Request
+10:25:21 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.335/click {}
+10:25:22 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/element/f.E25946D14C454734A08D50BBC95BF6B8.d.1129E98D83F13330889E4A9947EC0426.e.335/click HTTP/1.1" 200 0
+10:25:22 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:22 [DEBUG] Finished Request
+10:25:22 [DEBUG]   Linha 0: clicou <input>
+10:25:22 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': '\n            var sels = [\n                \'.modalWindow\',\n                \'[id*="mdlDocuments"]\',\n  ...', 'args': []}
+10:25:22 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:22 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:22 [DEBUG] Finished Request
+10:25:22 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': '\n            var sels = [\n                \'.modalWindow\',\n                \'[id*="mdlDocuments"]\',\n  ...', 'args': []}
+10:25:22 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:22 [DEBUG] Remote response: status=200 | data={"value":{"cls":"modalWindow","html":"\n\t\t\n                \u003Cdiv id=\"divModalInternal\" style=\"\">\n                    \u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_pnHandle\" class=\"modalWindowTop\">\n\t\t\t\n                        \u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_uppTitle\">\n                                \u003Cspan id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_lblTitle\" class=\"modalWindowTitle\">Documentos da remessa - 16715\u003C/span>\n                            \u003C/div>\n                        \u003Cinput type=\"button\" name=\"ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$btnClose\" value=\"\" onclick=\"javascript:__doPostBack('ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$btnClose','')\" id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_btnClose\" tabindex=\"-1\" title=\"Fechar\" class=\"modalCloseButton\" ignoredisableclick=\"True\">\n                    \n\t\t\u003C/div>\n                    \u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_contentContainer\" class=\"modalWindowContentContainer\">\n                        \u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_mtpGeral\" class=\"RadMultiPage RadMultiPage_Default\">\n\t\t\t\u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_pgvControlCenters\" class=\"rmpView modalPageView\">\n\t\t\t\t\n                                \n                                \u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_uppInnerControl\">\n                                    \n\n\u003Cdiv class=\"divFormatted applyFacelift\">\n    \u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_uppForm\">\n\t\n            \u003Ctable cellspacing=\"0\" border=\"0\" id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_frvDoc\" style=\"width:100%;border-collapse:collapse;\">\n\t\t\u003Ctbody>\u003Ctr>\n\t\t\t\u003Ctd colspan=\"2\">\n                    \u003Cdiv class=\"divButtons\" style=\"padding: 0 0 10px !important;\">\n                        \u003Cspan id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_frvDoc_ctrlReports_uppReportMenu\">\n        \u003Cdiv id=\"divReportButtonMini\">\n            \u003Cdiv tabin","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_pnMain"}} | headers=HTTPHeaderDict({'Content-Length': '2330', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:22 [DEBUG] Finished Request
+10:25:22 [INFO]   Linha 0: MODAL DETECTADO id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_pnMain' cls='modalWindow'
+10:25:22 [DEBUG]   Modal HTML (2000 chars): 
+		
+                <div id="divModalInternal" style="">
+                    <div id="ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_pnHandle" class="modalWindowTop">
+			
+                        <div id="ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_uppTitle">
+                                <span id="ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_lblTitle" class="modalWindowTitle">Documentos da remessa - 16715</span>
+                            </div>
+                        <input type="button" name="ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$btnClose" value="" onclick="javascript:__doPostBack('ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$btnClose','')" id="ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_btnClose" tabindex="-1" title="Fechar" class="modalCloseButton" ignoredisableclick="True">
+                    
+		</div>
+                    <div id="ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_contentContainer" class="modalWindowContentContainer">
+                        <div id="ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_mtpGeral" class="RadMultiPage RadMultiPage_Default">
+			<div id="ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_pgvControlCenters" class="rmpView modalPageView">
+				
+                                
+                                <div id="ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_uppInnerControl">
+                                    
+
+<div class="divFormatted applyFacelift">
+    <div id="ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_uppForm">
+	
+            <table cellspacing="0" border="0" id="ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_frvDoc" style="width:100%;border-collapse:collapse;">
+		<tbody><tr>
+			<td colspan="2">
+                    <div class="divButtons" style="padding: 0 0 10px !important;">
+                        <span id="ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_frvDoc_ctrlReports_uppReportMenu">
+        <div id="divReportButtonMini">
+            <div tabin
+10:25:22 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': '\n        var modal = document.getElementById(arguments[0]);\n        if (!modal) {\n            var el...', 'args': ['ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_pnMain']}
+10:25:22 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:22 [DEBUG] Remote response: status=200 | data={"value":{"clicaveis":[{"cls":"modalCloseButton","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_btnClose","src":"","tag":"INPUT","text":"","title":"Fechar","value":""},{"cls":"rmLink rmRootLink rmFocused","href":"#","id":"","src":"","tag":"A","text":"Imprimir","title":"","value":""},{"cls":"rmLink","href":"#","id":"","src":"","tag":"A","text":"Conferência de Assinatura Digital","title":"","value":""},{"cls":"rmLink","href":"#","id":"","src":"","tag":"A","text":"Duplicata","title":"","value":""},{"cls":"rmLink","href":"#","id":"","src":"","tag":"A","text":"Original + Conferência","title":"","value":""},{"cls":"","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_frvDoc_ctrlReports_mnuReports_ClientState","src":"","tag":"INPUT","text":"","title":"","value":""},{"cls":"","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdExp_btnTriggerExport","src":"","tag":"INPUT","text":"","title":"","value":""},{"cls":"","href":"javascript:__doPostBack('ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$ctl03$","id":"","src":"","tag":"A","text":"Documento","title":"Descrição do Documento","value":""},{"cls":"","href":"javascript:__doPostBack('ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$ctl03$","id":"","src":"","tag":"A","text":"Tipo","title":"Tipo de Documento","value":""},{"cls":"","href":"javascript:__doPostBack('ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$ctl03$","id":"","src":"","tag":"A","text":"Título","title":"Clique para ordenar","value":""},{"cls":"","href":"javascript:__doPostBack('ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$ctl03$","id":"","src":"","tag":"A","text":"Sacado","title":"Clique para ordenar","value":""},{"cls":"","href":"javascript:__doPostBack('ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$ctl03$","id":"","src":"","tag":"A","text":"Valor","title":"Clique para ordenar","value":""},{"cls":"","href":"javascript:__doPostBack('ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$ctl03$","id":"","src":"","tag":"A","text":"Recebimento","title":"Clique para ordenar","value":""},{"cls":"btnGrid btnSigners","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl04_btnSigners","src":"","tag":"INPUT","text":"","title":"Visualizar Assinantes","value":"Assinar"},{"cls":"btnGrid btnP7s","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl04_grdShowPDFViewer_grdShowPDFViewer","src":"","tag":"INPUT","text":"","title":"Visualizar Documento","value":""},{"cls":"btnGrid btnPdf","href":"javascript:__doPostBack('ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$ctl03$","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl04_gbDownload_gbDownload","src":"","tag":"A","text":"","title":"Clique para fazer o download do arquivo PDF","value":""},{"cls":"btnGrid btnGridP7sDown","href":"javascript:__doPostBack('ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$ctl03$","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl04_gbDownloadP7S_gbDownloadP7S","src":"","tag":"A","text":"","title":"Clique para fazer o download do arquivo P7S","value":""},{"cls":"rgPageFirst","href":"","id":"","src":"","tag":"INPUT","text":"","title":"Primeira página","value":" "},{"cls":"rgPagePrev","href":"","id":"","src":"","tag":"INPUT","text":"","title":"Página anterior","value":" "},{"cls":"rgCurrentPage","href":"javascript:__doPostBack('ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$ctl03$","id":"","src":"","tag":"A","text":"1","title":"","value":""},{"cls":"rgPageNext","href":"","id":"","src":"","tag":"INPUT","text":"","title":"Próxima página","value":" "},{"cls":"rgPageLast","href":"","id":"","src":"","tag":"INPUT","text":"","title":"Última página","value":" "},{"cls":"rcbInput radPreventDecorate","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl03_ctl01_PageSizeComboBox_Input","src":"","tag":"INPUT","text":"","title":"","value":"30"},{"cls":"","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl03_ctl01_PageSizeComboBox_Arrow","src":"","tag":"A","text":"select","title":"","value":""},{"cls":"","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl03_ctl01_PageSizeComboBox_ClientState","src":"","tag":"INPUT","text":"","title":"","value":""},{"cls":"","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ClientState","src":"","tag":"INPUT","text":"","title":"","value":"{\"selectedIndexes\":[\"0\"],\"selectedCellsIndexes\":[],\"unselectableItemsIndexes\":[],\"reorderedColumns\":[],\"expandedItems\":[],\"expandedGroupItems\":[],\"expandedFilterItems\":[],\"deletedItems\":[],\"hidedColumns\":[],\"showedColumns\":[],\"groupColsState\":{},\"hierarchyState\":{},\"scrolledPosition\":\"0,0\",\"popUpLocations\":{},\"draggedItemsIndexes\":[]}"},{"cls":"","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdExp1_btnTriggerExport","src":"","tag":"INPUT","text":"","title":"","value":""},{"cls":"","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdUserSignature_ClientState","src":"","tag":"INPUT","text":"","title":"","value":""},{"cls":"modalCloseButton","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_wndObs_btnClose","src":"","tag":"INPUT","text":"","title":"Fechar","value":""},{"cls":"","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_wndObs_txbDesc_ClientState","src":"","tag":"INPUT","text":"","title":"","value":"{\"enabled\":false,\"emptyMessage\":\"\",\"validationText\":\"\",\"valueAsString\":\"\",\"lastSetTextBoxValue\":\"\"}"},{"cls":"btnOk","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_wndObs_btnOk","src":"","tag":"INPUT","text":"","title":"","value":"Ok"},{"cls":"btnCancel","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_wndObs_btnCancel","src":"","tag":"INPUT","text":"","title":"","value":"Cancelar"},{"cls":"","href":"","id":"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_mtpGeral_ClientState","src":"","tag":"INPUT","text":"","title":"","value":""}],"html":"\n\t\t\n                \u003Cdiv id=\"divModalInternal\" style=\"\">\n                    \u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_pnHandle\" class=\"modalWindowTop\">\n\t\t\t\n                        \u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_uppTitle\">\n                                \u003Cspan id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_lblTitle\" class=\"modalWindowTitle\">Documentos da remessa - 16715\u003C/span>\n                            \u003C/div>\n                        \u003Cinput type=\"button\" name=\"ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$btnClose\" value=\"\" onclick=\"javascript:__doPostBack('ctl00$cphContext$tabManager$PV1_UC0$mdlDocuments$btnClose','')\" id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_btnClose\" tabindex=\"-1\" title=\"Fechar\" class=\"modalCloseButton\" ignoredisableclick=\"True\">\n                    \n\t\t\u003C/div>\n                    \u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_contentContainer\" class=\"modalWindowContentContainer\">\n                        \u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_mtpGeral\" class=\"RadMultiPage RadMultiPage_Default\">\n\t\t\t\u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_pgvControlCenters\" class=\"rmpView modalPageView\">\n\t\t\t\t\n                                \n                                \u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_uppInnerControl\">\n                                    \n\n\u003Cdiv class=\"divFormatted applyFacelift\">\n    \u003Cdiv id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_uppForm\">\n\t\n            \u003Ctable cellspacing=\"0\" border=\"0\" id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_frvDoc\" style=\"width:100%;border-collapse:collapse;\">\n\t\t\u003Ctbody>\u003Ctr>\n\t\t\t\u003Ctd colspan=\"2\">\n                    \u003Cdiv class=\"divButtons\" style=\"padding: 0 0 10px !important;\">\n                        \u003Cspan id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_frvDoc_ctrlReports_uppReportMenu\">\n        \u003Cdiv id=\"divReportButtonMini\">\n            \u003Cdiv tabindex=\"0\" id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_frvDoc_ctrlReports_mnuReports\" class=\"RadMenu RadMenu_Top printMenu\" style=\"z-index: 7000;\">\n\t\t\t\t\u003Cul class=\"rmRootGroup rmHorizontal\">\n\t\t\t\t\t\u003Cli class=\"rmItem rmFirst rmLast\">\u003Ca class=\"rmLink rmRootLink rmFocused\" href=\"#\">\u003Cspan class=\"rmText rmExpandDown\">Imprimir\u003C/span>\u003C/a>\u003Cdiv class=\"rmSlide\">\n\t\t\t\t\t\t\u003Cul class=\"rmVertical rmGroup rmLevel1\">\n\t\t\t\t\t\t\t\u003Cli class=\"rmItem rmFirst\">\u003Ca class=\"rmLink\" href=\"#\">\u003Cspan class=\"rmText\">Conferência de Assinatura Digital\u003C/span>\u003C/a>\u003C/li>\u003Cli class=\"rmItem \">\u003Ca class=\"rmLink\" href=\"#\">\u003Cspan class=\"rmText\">Duplicata\u003C/span>\u003C/a>\u003C/li>\u003Cli class=\"rmItem rmLast\">\u003Ca class=\"rmLink\" href=\"#\">\u003Cspan class=\"rmText\">Original + Conferência\u003C/span>\u003C/a>\u003C/li>\n\t\t\t\t\t\t\u003C/ul>\n\t\t\t\t\t\u003C/div>\u003C/li>\n\t\t\t\t\u003C/ul>\u003Cinput id=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_frvDoc_ctrlReports_mnuReports_ClientState\" name=\"ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_frvDoc_ctrlReports_mnuReports_ClientState\" t","linhas":17,"ok":true}} | headers=HTTPHeaderDict({'Content-Length': '9729', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:22 [DEBUG] Finished Request
+10:25:22 [INFO]   Modal: 17 linhas na tabela, 33 elementos clicaveis
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_btnClose' cls='modalCloseButton' title='Fechar' src='' href='' value='' text=''
+10:25:22 [INFO]     A id='' cls='rmLink rmRootLink rmFocused' title='' src='' href='#' value='' text='Imprimir'
+10:25:22 [INFO]     A id='' cls='rmLink' title='' src='' href='#' value='' text='Conferência de Assinatura Digital'
+10:25:22 [INFO]     A id='' cls='rmLink' title='' src='' href='#' value='' text='Duplicata'
+10:25:22 [INFO]     A id='' cls='rmLink' title='' src='' href='#' value='' text='Original + Conferência'
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_frvDoc_ctrlReports_mnuReports_ClientState' cls='' title='' src='' href='' value='' text=''
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdExp_btnTriggerExport' cls='' title='' src='' href='' value='' text=''
+10:25:22 [INFO]     A id='' cls='' title='Descrição do Documento' src='' href='javascript:__doPostBack('ctl00$cphContext$tabManag' value='' text='Documento'
+10:25:22 [INFO]     A id='' cls='' title='Tipo de Documento' src='' href='javascript:__doPostBack('ctl00$cphContext$tabManag' value='' text='Tipo'
+10:25:22 [INFO]     A id='' cls='' title='Clique para ordenar' src='' href='javascript:__doPostBack('ctl00$cphContext$tabManag' value='' text='Título'
+10:25:22 [INFO]     A id='' cls='' title='Clique para ordenar' src='' href='javascript:__doPostBack('ctl00$cphContext$tabManag' value='' text='Sacado'
+10:25:22 [INFO]     A id='' cls='' title='Clique para ordenar' src='' href='javascript:__doPostBack('ctl00$cphContext$tabManag' value='' text='Valor'
+10:25:22 [INFO]     A id='' cls='' title='Clique para ordenar' src='' href='javascript:__doPostBack('ctl00$cphContext$tabManag' value='' text='Recebimento'
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl04_btnSigners' cls='btnGrid btnSigners' title='Visualizar Assinantes' src='' href='' value='Assinar' text=''
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl04_grdShowPDFViewer_grdShowPDFViewer' cls='btnGrid btnP7s' title='Visualizar Documento' src='' href='' value='' text=''
+10:25:22 [INFO]     A id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl04_gbDownload_gbDownload' cls='btnGrid btnPdf' title='Clique para fazer o download do arquivo PDF' src='' href='javascript:__doPostBack('ctl00$cphContext$tabManag' value='' text=''
+10:25:22 [INFO]     A id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl04_gbDownloadP7S_gbDownloadP7S' cls='btnGrid btnGridP7sDown' title='Clique para fazer o download do arquivo P7S' src='' href='javascript:__doPostBack('ctl00$cphContext$tabManag' value='' text=''
+10:25:22 [INFO]     INPUT id='' cls='rgPageFirst' title='Primeira página' src='' href='' value=' ' text=''
+10:25:22 [INFO]     INPUT id='' cls='rgPagePrev' title='Página anterior' src='' href='' value=' ' text=''
+10:25:22 [INFO]     A id='' cls='rgCurrentPage' title='' src='' href='javascript:__doPostBack('ctl00$cphContext$tabManag' value='' text='1'
+10:25:22 [INFO]     INPUT id='' cls='rgPageNext' title='Próxima página' src='' href='' value=' ' text=''
+10:25:22 [INFO]     INPUT id='' cls='rgPageLast' title='Última página' src='' href='' value=' ' text=''
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl03_ctl01_PageSizeComboBox_Input' cls='rcbInput radPreventDecorate' title='' src='' href='' value='30' text=''
+10:25:22 [INFO]     A id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl03_ctl01_PageSizeComboBox_Arrow' cls='' title='' src='' href='' value='' text='select'
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ctl00_ctl03_ctl01_PageSizeComboBox_ClientState' cls='' title='' src='' href='' value='' text=''
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdDocument_ClientState' cls='' title='' src='' href='' value='{"selectedIndexes":["0"],"selectedCellsIndexes":[],"unselectableItemsIndexes":[],"reorderedColumns":[],"expandedItems":[],"expandedGroupItems":[],"expandedFilterItems":[],"deletedItems":[],"hidedColumns":[],"showedColumns":[],"groupColsState":{},"hierarchyState":{},"scrolledPosition":"0,0","popUpLocations":{},"draggedItemsIndexes":[]}' text=''
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdExp1_btnTriggerExport' cls='' title='' src='' href='' value='' text=''
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_grdUserSignature_ClientState' cls='' title='' src='' href='' value='' text=''
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_wndObs_btnClose' cls='modalCloseButton' title='Fechar' src='' href='' value='' text=''
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_wndObs_txbDesc_ClientState' cls='' title='' src='' href='' value='{"enabled":false,"emptyMessage":"","validationText":"","valueAsString":"","lastSetTextBoxValue":""}' text=''
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_wndObs_btnOk' cls='btnOk' title='' src='' href='' value='Ok' text=''
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_ctl03_wndObs_btnCancel' cls='btnCancel' title='' src='' href='' value='Cancelar' text=''
+10:25:22 [INFO]     INPUT id='ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_mtpGeral_ClientState' cls='' title='' src='' href='' value='' text=''
+10:25:22 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': '\n        var modal_id = arguments[0];\n        var modal = document.getElementById(modal_id);\n       ...', 'args': ['ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_pnMain']}
+10:25:22 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:22 [DEBUG] Remote response: status=200 | data={"value":{"cls":"btnGrid btnPdf","metodo":"a.btnPdf","ok":true,"tag":"A","title":"Clique para fazer o download do arquivo PDF"}} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:22 [DEBUG] Finished Request
+10:25:22 [INFO]   Linha 0: download clicado — metodo=a.btnPdf tag=A cls='btnGrid btnPdf' title='Clique para fazer o download do arquivo PDF'
+10:25:22 [INFO] Aguardando PDF em C:\Users\ZAMBONI\Documents\Data Science\_projeto_qcertifica\qcertifica_scraper\downloads...
+10:25:23 [INFO] PDF BAIXADO: Termo_25357905.pdf
+10:25:23 [DEBUG] POST http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync {'script': '\n        // Tenta botao fechar por palavras-chave\n        var modal = document.getElementById(argume...', 'args': ['ctl00_cphContext_tabManager_PV1_UC0_mdlDocuments_pnMain']}
+10:25:23 [DEBUG] http://localhost:58362 "POST /session/c1b7a8288f8c16b7a0b0b7730297eb5c/execute/sync HTTP/1.1" 200 0
+10:25:23 [DEBUG] Remote response: status=200 | data={"value":"botao:fechar"} | headers=HTTPHeaderDict({'Content-Length': '24', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:23 [DEBUG] Finished Request
+10:25:23 [DEBUG]   Linha 0: modal fechado via 'botao:fechar'
+10:25:24 [INFO] ============================================================
+10:25:24 [INFO]   Concluido.
+10:25:24 [INFO] ============================================================
+10:25:38 [DEBUG] DELETE http://localhost:58362/session/c1b7a8288f8c16b7a0b0b7730297eb5c {}
+10:25:38 [DEBUG] http://localhost:58362 "DELETE /session/c1b7a8288f8c16b7a0b0b7730297eb5c HTTP/1.1" 200 0
+10:25:38 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+10:25:38 [DEBUG] Finished Request

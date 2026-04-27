@@ -1,0 +1,7 @@
+.env
+downloads/
+checkpoint.txt
+downloads_log.csv
+scraper.log
+__pycache__/
+*.pyc
